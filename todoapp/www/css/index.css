@@ -1,53 +1,54 @@
 .button{
     text-align: center;
+    font-size: 18px;
+    
 
 
 }
 #p1{
 
     text-align: center;
+    text-shadow: 2px 2px 4px #979899;
 
 }
 
-#deletebtn{
-    background-color: #f78585;
-    color: red;
-}
-
-#donebtn{
-    background-color: #c9e2fc;
-    color: #42a7f4;
-}
 
 #addbtn{
 
-    color: green;
-    background-color: #b6f9c7;
+    
+    background-color: green;
+    font-size: 25px;
+
+}
+
+#addbtn:hover{
+
+    
+    background-color: green;
+    font-size: 30px;
 
 }
 
 #head1{
-background-color: #333534;
-color: #bdbfbe;
+    border: 1px solid black; 
 
 }
 
 #head2{
-    background-color: #333534;
-    color: #bdbfbe;
+    /* background-color: #6f7070; */
+    /* color: black; */
+    border: 1px solid black; 
     
     }
 
 
 #foot1{
-    background-color: #333534;
-    color: #bdbfbe;
+    border: 1px solid black; 
     
     }
 
 #foot2{
-    background-color: #333534;
-    color: #bdbfbe;
+    border: 1px solid black; 
         
 }
 
@@ -72,8 +73,22 @@ color: #bdbfbe;
     margin: 0;
     font-size: 23px;
     
+
+}
+
+.item:hover{
+    width:100%;
+    height: 50px;
+    min-height: 50px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0;
+    margin: 0;
+    font-size: 23px;
+    background-color: mistyrose;
     
     
+
 }
 
 .item p.text{
@@ -124,7 +139,7 @@ color: #bdbfbe;
     top:10px;
 }
 .item i.de:hover{
-    color:#af0000;
+    color:#4286f4;
     font-size: 30px;
     
 }
