@@ -62,9 +62,9 @@ function addToDo(toDo, id, done, trash){
 
 //add item to list user enter
 
-document.addEventListener("keyup",function(event){
+document.getElementById("addbtn").addEventListener("click",function(event){
 
-    if(event.keyCode == 13){
+    if(document.getElementById('addbtn').onclick = true){
 
         const toDo = input.value;
 
