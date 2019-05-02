@@ -1,4 +1,7 @@
 .button{
+
+
+
     text-align: center;
     font-size: 18px;
     
@@ -21,6 +24,14 @@
 
 }
 
+#deletebtn{
+
+    background-color: red;
+    font-size: 25px;
+
+
+}
+
 #addtask{
 
     list-style: none;
@@ -35,6 +46,14 @@
     font-size: 30px;
 
 }
+
+#deletebtn:hover{
+
+    background-color: red;
+    font-size: 30px;
+
+}
+
 
 #head1{
     border: 1px solid black; 

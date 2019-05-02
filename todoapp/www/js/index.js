@@ -29,6 +29,34 @@ else{
 }
 
 
+function onLoad(){
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+}
+
+function onDeviceready(){
+
+    document.addEventListener("resume", this.onResume, false);
+
+    document.addEventListener("onpause", this.onPause, false);
+
+}
+
+function onResume(){
+
+
+    console.log("resume!");
+
+}
+
+function onPause(){
+
+
+    console.log("pause!");
+
+}
+
 //load item to user interface
 
 function loadList(array){
@@ -198,33 +226,33 @@ list.addEventListener("click", function(event){
 
 
 
-var app = {
-    // Application Constructor
-    initialize: function() {
+// var app = {
+//     // Application Constructor
+//     initialize: function() {
 
-        document.addEventListener("resume", this.onResume, false);
+//         document.addEventListener("resume", this.onResume, false);
 
-        document.addEventListener("onpause", this.onPause, false);
+//         document.addEventListener("onpause", this.onPause, false);
 
 
 
-    },
+//     },
 
-    onResume:function () {
+//     onResume:function () {
     
 
 
-        console.log("resume!");
+//         console.log("resume!");
         
-    },
+//     },
 
-    onPause: function(){
+//     onPause: function(){
 
-        console.log("pause!");
+//         console.log("pause!");
 
-    },
+//     },
 
-};
+// };
 
-app.initialize();
+// app.initialize();
 

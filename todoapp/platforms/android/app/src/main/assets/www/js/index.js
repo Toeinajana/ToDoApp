@@ -29,6 +29,34 @@ else{
 }
 
 
+function onLoad(){
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+}
+
+function onDeviceready(){
+
+    document.addEventListener("resume", this.onResume, false);
+
+    document.addEventListener("onpause", this.onPause, false);
+
+}
+
+function onResume(){
+
+
+    console.log("resume!");
+
+}
+
+function onPause(){
+
+
+    console.log("pause!");
+
+}
+
 //load item to user interface
 
 function loadList(array){
@@ -106,6 +134,34 @@ document.getElementById("addbtn").addEventListener("click",function(event){
 });
 
 
+document.getElementById("deletebtn").addEventListener("click",function(event){
+
+
+    if(document.getElementById('deletebtn').onclick = true){
+         
+       LIST.forEach((task,i) =>{
+
+
+        if(task.done){
+
+            LIST[i].trash = true;
+
+        }
+
+
+       })
+
+       document.getElementById('list').innerHTML = '';
+       loadList(LIST)
+
+       localStorage.setItem("TODO", JSON.stringify(LIST));
+       
+    }
+
+
+});
+
+
 //complete to do
 
 function completeToDo(element){
@@ -129,6 +185,13 @@ function removeToDo(element){
 
     LIST[element.id].trash = true;
 
+    // if(LIST[element.id].trash == true){
+
+    //     localStorage.removeItem("TODO");
+    // }
+
+
+
 
 }
 
@@ -147,8 +210,10 @@ list.addEventListener("click", function(event){
     }
     else if(elementJob == "delete"){
 
-        removeToDo(element);
 
+        console.log("delete")
+
+        removeToDo(element);
 
     }
 
@@ -159,33 +224,35 @@ list.addEventListener("click", function(event){
 
 });
 
-var app = {
-    // Application Constructor
-    initialize: function() {
-
-        document.addEventListener("resume", this.onResume, false);
-
-        document.addEventListener("onpause", this.onPause, false);
 
 
+// var app = {
+//     // Application Constructor
+//     initialize: function() {
 
-    },
+//         document.addEventListener("resume", this.onResume, false);
 
-    onResume:function () {
+//         document.addEventListener("onpause", this.onPause, false);
+
+
+
+//     },
+
+//     onResume:function () {
     
 
 
-        console.log("resume!");
+//         console.log("resume!");
         
-    },
+//     },
 
-    onPause: function(){
+//     onPause: function(){
 
-        console.log("pause!");
+//         console.log("pause!");
 
-    },
+//     },
 
-};
+// };
 
-app.initialize();
+// app.initialize();
 

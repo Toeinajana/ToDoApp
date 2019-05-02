@@ -15,71 +15,56 @@
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/index.css">
-
-        
-
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <title>Need to be done</title>
     </head>
-    <body>
-
-
-            <!-- Start of first page -->
-<div data-role="page" id="firstP">
-
-        <div data-role="header" id="head1">
-            <h1>To do App</h1>
+    <body onload="onDeviceready()">
+    
+    <!-- Start of second page -->
+    <div data-role="page" id="task">
+    
+        <div data-role="header" id="head2">
+            <h1>To do APP</h1>
         </div><!-- /header -->
     
-        <div data-role="main" class="ui-content">
+        <div role="main" class="ui-content">
 
-            <div>
+                        <div class="ui-field-contain button">
+                        
+                                  
+                                    <input type="text" name="input" id="input" placeholder="What you need to do ?"> 
+                                    <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext" id="addbtn">Plus</a>
 
-                    <img src="img/bg.jpg" alt="bg" class="responsive">
+                        </div>
 
+                    
 
+                    <div class="content">
 
-                    <h3 id="p1">Welcome to To do app !</h3>
-
-
-
-            </div>
-            
-
-         
-                    <form>
-
-                        <ul data-role="listview">
-
-                            <li>
-
-                                   
-                                           
-                                
-                                    <a href="task.html"><input type="Button" value="Add some tasks !" id="addtask"></a>
-
-                            </li>
-
-
+                        <ul id="list">
 
 
                         </ul>
-                                
-                               
-                    </form>
+                        
+       
+                    </div>
 
-            <!-- <p>View internal page called <a href="#bar">bar</a></p> -->
 
-            
+                    <div class="ui-field-contain button">
+                       
+                        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-recycle ui-btn-icon-notext" id="deletebtn">delete</a>
+
+                     </div>
+
+
         </div><!-- /content -->
     
-        <div data-role="footer" data-position="fixed" id="foot1">
+        <div data-role="footer" data-position="fixed" id="foot2">
             <h4>Nantawan 6010</h4>
         </div><!-- /footer -->
     </div><!-- /page -->
 
-    <script type="text/javascript" src="js/index.js"></script> 
-
+        <script type="text/javascript" src="js/index.js"></script> 
     </body>
 </html>
