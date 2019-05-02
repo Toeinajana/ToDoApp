@@ -106,6 +106,34 @@ document.getElementById("addbtn").addEventListener("click",function(event){
 });
 
 
+document.getElementById("deletebtn").addEventListener("click",function(event){
+
+
+    if(document.getElementById('deletebtn').onclick = true){
+         
+       LIST.forEach((task,i) =>{
+
+
+        if(task.done){
+
+            LIST[i].trash = true;
+
+        }
+
+
+       })
+
+       document.getElementById('list').innerHTML = '';
+       loadList(LIST)
+
+       localStorage.setItem("TODO", JSON.stringify(LIST));
+       
+    }
+
+
+});
+
+
 //complete to do
 
 function completeToDo(element){
@@ -129,6 +157,13 @@ function removeToDo(element){
 
     LIST[element.id].trash = true;
 
+    // if(LIST[element.id].trash == true){
+
+    //     localStorage.removeItem("TODO");
+    // }
+
+
+
 
 }
 
@@ -147,8 +182,10 @@ list.addEventListener("click", function(event){
     }
     else if(elementJob == "delete"){
 
-        removeToDo(element);
 
+        console.log("delete")
+
+        removeToDo(element);
 
     }
 
@@ -158,6 +195,8 @@ list.addEventListener("click", function(event){
 
 
 });
+
+
 
 var app = {
     // Application Constructor
