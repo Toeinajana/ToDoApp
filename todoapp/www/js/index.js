@@ -223,36 +223,3 @@ list.addEventListener("click", function(event){
 
 
 });
-
-
-
-// var app = {
-//     // Application Constructor
-//     initialize: function() {
-
-//         document.addEventListener("resume", this.onResume, false);
-
-//         document.addEventListener("onpause", this.onPause, false);
-
-
-
-//     },
-
-//     onResume:function () {
-    
-
-
-//         console.log("resume!");
-        
-//     },
-
-//     onPause: function(){
-
-//         console.log("pause!");
-
-//     },
-
-// };
-
-// app.initialize();
-
